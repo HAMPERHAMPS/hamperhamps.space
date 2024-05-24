@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<head>
+    <title>HAMPERHAMPS Space</title>
+    <meta name="robots" content="index, follow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="My info and projects :D">
+    <link rel="icon" href="https://example.com/favicon.ico">
+</head>
+<style>
+    body {
+        margin: 0;
+        overflow-x: hidden;
+        background-color: #000;
+        
+        
+        
+    }
+
+
+    .scroll-black *::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    .scroll-black *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .scroll-black *::-webkit-scrollbar-thumb {
+        background-color: rgb(70, 70, 70);
+    }
+
+    .scroll-black * {
+        scrollbar-width: thin;
+        scrollbar-color: rgb(70, 70, 70) auto;
+    }
+
+    .scroll-black *::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    .scroll-black *::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .scroll-black *::-webkit-scrollbar-thumb {
+        background-color: rgb(70, 70, 70);
+    }
+
+
+    .scroller {
+        width: 300px;
+        height: 100px;
+        overflow-y: scroll;
+        scrollbar-color: black; /* Set the color to black */
+    }
+
+    .stars {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        background-color: #fff;
+        
+    }
+
+    @keyframes twinkle {
+        0%, 100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        50% {
+            transform: translateY(-100vh);
+            opacity: 0;
+        }
+    }
+    .translucent-box {
+        background-color: rgba(31, 31, 31, 0.5); /* Set the background color with transparency */
+        backdrop-filter: blur(2px); /* Apply a blur effect to the background */
+        padding: 20px;
+        z-index: 99999999999999999999999;
+        position: relative;
+        border-radius: 25px;
+        width: 95%;
+    }
+    .spaceship {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background-color: #f0f0f0;
+        transform: rotate(45deg);
+        animation: fly 1s infinite linear;
+    }
+
+    .galaxy {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-image: url('galaxy.png');
+        background-size: cover;
+        animation: spin 20s infinite linear;
+    }
+    @keyframes fly {
+        0% {
+            left: -30px;
+        }
+            100% {
+            left: calc(100vw + 30px);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<body>
+    <canvas height="5px"></canvas>
+    <center><div class="translucent-box">
+        <center><h1 style="color: grey; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Hewo! This is my space.</h1></center>
+    </div></center>
+    <canvas height="10px"></canvas>
+    <center><div class="translucent-box">
+        <center><p style="color: rgb(173, 169, 169); font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph paragraph </p></center>
+    </div></center>
+    
+    <script>
+        const numStars = 100;
+        const container = document.body;
+
+        for (let i = 0; i < numStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'stars';
+            star.style.left = `${Math.random() * 100}vw`;
+            star.style.top = `${Math.random() * 100}vh`;
+            container.appendChild(star);
+        }
+    </script>
+    <script>
+        const numSpaceships = 1;
+        const numGalaxies = 3;
+
+        
+
+        for (let i = 0; i < numGalaxies; i++) {
+            const galaxy = document.createElement('div');
+            galaxy.className = 'galaxy';
+            galaxy.style.left = `${Math.random() * 100}vw`;
+            galaxy.style.top = `${Math.random() * 100}vh`;
+            container.appendChild(galaxy);
+        }
+    </script>
+    <canvas height="5px"></canvas>
+</body>
