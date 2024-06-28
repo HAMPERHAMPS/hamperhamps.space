@@ -53,7 +53,7 @@
         width: 300px;
         height: 100px;
         overflow-y: scroll;
-        scrollbar-color: black; /* Set the color to black */
+        scrollbar-color: black; 
     }
 
     .stars {
@@ -75,8 +75,8 @@
         }
     }
     .translucent-box {
-        background-color: rgba(31, 31, 31, 0.5); /* Set the background color with transparency */
-        backdrop-filter: blur(2px); /* Apply a blur effect to the background */
+        background-color: rgba(31, 31, 31, 0.5); 
+        backdrop-filter: blur(2px);
         padding: 20px;
         z-index: 99999999999999999999999;
         position: relative;
@@ -123,7 +123,7 @@
         const startDate = new Date('2010-09-30');
         const today = new Date();
         const ageInMilliseconds = today - startDate;
-        const millisecondsPerYear = 1000 * 60 * 60 * 24 * 365.25; // Account for leap years
+        const millisecondsPerYear = 1000 * 60 * 60 * 24 * 365.25;
         const ageInYears = Math.floor(ageInMilliseconds / millisecondsPerYear);
         document.getElementById('age').textContent = ageInYears;
     }
